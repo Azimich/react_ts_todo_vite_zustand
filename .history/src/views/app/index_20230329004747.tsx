@@ -1,0 +1,64 @@
+import React, { FC, useEffect } from 'react'
+import { useTuDoStore } from '../../data/stores/useToDoStore';
+import InputPlus from '../components/InputPlus';
+import InputTask from '../components/InputTask';
+
+import styles from './index.module.scss';
+
+
+const App: FC = () => {
+  const [
+    tasks,
+    createTask,
+    updateTask,
+    removeTask
+  ] = useTuDoStore((state) => [
+    state.tasks,
+    state.createTask,
+    state.updateTask,
+    state.removeTask
+  ]); 
+
+  console.log(33, tasks);
+  
+
+  // useEffect(() => {
+  //   createTask('pppp');
+  // }, [createTask]);
+  
+  return (
+    <div className={styles.article}>
+      <h1 className={styles.article__Title}>To Do List</h1>
+      <section className={styles.article__Section}>
+        <InputPlus
+          onAdd={(title) => {
+            if (title) {
+              createTask(title);
+            }
+          }}
+        />
+      </section>
+      <section className={styles.article__Section}>
+        {!tasks.length && (
+          <p className={styles.article__Text}>There is no one task.</p>
+        )}
+        {tasks.map((item) => {
+          return (
+            <InputTask 
+            onAdd={function (title: string): void {
+              throw new Error('Function not implemented.');
+            } } onDone={function (id: string): void {
+              throw new Error('Function not implemented.');
+            } } onEdited={function (id: string, value: string): void {
+              throw new Error('Function not implemented.');
+            } } onRemoved={function (id: string): void {
+              throw new Error('Function not implemented.');
+            } } {...item}            />
+          )
+        })}
+      </section>
+    </div>
+  );
+}
+
+export default App

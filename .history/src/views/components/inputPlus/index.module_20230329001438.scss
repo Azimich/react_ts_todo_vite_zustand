@@ -1,0 +1,22 @@
+
+.inputPlus {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 45px;
+  &__Value {
+    border: 1px solid #dadada;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    background: #e5fcee76;
+    outline: none;
+    &::placeholder {
+      color: #b1b1b1;
+    }
+  }
+  &__Button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
