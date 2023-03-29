@@ -8,11 +8,11 @@
     border: 1px solid #e1e8ff;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    padding: 10px;
     font-size: 1rem;
     flex: 1 1 auto;
     background: rgb(225 232 255);
     outline: none;
-    padding: 14px 10px;
     &::placeholder {
       color: #464646;
     }
@@ -28,7 +28,7 @@
     background: #014967 url('../../images/plus.svg') no-repeat center center;
     padding: 10px;
     transition: all 0.3s ease;
-    width: 50px;
+    width: ;
     &:hover {
       opacity: 0.8;
     }

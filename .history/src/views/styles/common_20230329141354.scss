@@ -4,12 +4,13 @@ body {
   font: 16px/1.4 'Roboto', sans-serif;
   background: #e1e8ff;
   min-height: 100vh;
-  padding: 5rem 0;
+  padding: 1rem;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #root {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+  w
 }
